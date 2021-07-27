@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+a {
+  // color: $link-color;
+  color: text-color($primary-color);
+  text-decoration: none;
+  //   &:hover{color:yellow;}
+  //   &:link{color:yellow;}
+  //   &:visited{color:yellow;}
+  //   &:active{color:yellow;}
+}
+body {
+  background: $body-color;
+  font-family: $body-font;
+  line-height: 1.6;
+}
+
+
+$steps:(1,2,3,4,5,6,7,8,9,10);//object
+@each $steps in $steps {
+  //.my-1
+  .m-#{$steps}{ margin: #{$steps*10}px ;}
+  .my-#{$steps}{ margin: #{$steps*10}px 0;}
+  .mx-#{$steps}{ margin:0 #{$steps*10}px;}
+  .p-#{$steps}{ margin: #{$steps*10}px;}
+  .py-#{$steps}{ margin: #{$steps*10}px 0;}
+  .px-#{$steps}{ margin:0 #{$steps*10}px;}
+}
